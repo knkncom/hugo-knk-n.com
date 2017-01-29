@@ -1,0 +1,837 @@
+/*
+Theme Name: knkn2017
+Theme URI: http://knk-n.com
+Author: knk_n
+Author URI: http://knk-n.com
+Description: 
+Version: 1.0
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+    color: #333;
+    font-style: normal;
+}
+@media screen and (max-width:760px) {
+    #wrapper {
+        position: absolute;
+        width: 100%;
+        background-color: #ffffff;
+    }
+}
+@media screen and (min-width:1000px) {
+    #wrapper {
+        position: absolute;
+        width: 100%;
+        background-color: #F7F7F7;
+    }
+}
+header {
+    width: 100%;
+    background-color: #EBEBEB;
+    box-shadow: 0 3px 3px -3px #777;
+    position: relative;
+    z-index: 100;
+}
+@media screen and (max-width:760px) {
+    .headerInr {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0.3rem 0;
+    }
+}
+@media screen and (min-width:1000px) {
+    .headerInr {
+        width: 1120px;
+        margin: 0 auto;
+        padding: 0.5rem 0;
+    }
+}
+@media screen and (max-width:760px) {
+    #siteLogo {
+        text-indent: -9999px;
+        display: block;
+        background-image: url(../images/site_logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:761px) {
+    #siteLogo {
+        text-indent: -9999px;
+        display: block;
+        background-image: url(../images/site_logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        width: 250px;
+        height: 80px;
+        margin-left: 1rem;
+    }
+}
+#siteLogo:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+@media screen and (max-width:760px) {
+    #container {
+        width: 100%;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:761px) {
+    #container {
+        width: 1120px;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    コンテンツ                                           *****/
+/** ------------------------------------------------------------------------------ **/
+@media screen and (max-width:760px) {
+    #content {
+        width: 100%;
+        background-color: #ffffff;
+    }
+}
+@media screen and (min-width:761px) {
+    #content {
+        width: 790px;
+        background-color: #F7F7F7;
+    }
+}
+@media screen and (max-width:760px) {
+    #recentPosts {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+    }
+}
+@media screen and (min-width:761px) {
+    #recentPosts {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+    }
+}
+@media screen and (max-width:760px) {
+    .recentPost {
+        width: 47%;
+        margin: 0 auto 1rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 0.2rem #777;
+        border-radius: 0.3rem;
+        position: relative;
+    }
+}
+@media screen and (min-width:761px) {
+    .recentPost {
+        width: 360px;
+        margin: 0 auto 1.5rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 0.2rem #777;
+        border-radius: 0.3rem;
+        position: relative;
+    }
+}
+.recentPost a {
+    color: inherit;
+    text-decoration: inherit;
+}
+@media screen and (max-width:760px) {
+    .recentPost .thumbnailImg {
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 8rem;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+    .recentPost .postTitleBody {
+        padding: 0.8rem 0.5rem;
+    }
+    .recentPost .postTitle {
+        font-size: 0.9rem;
+    }
+    .recentPost .postUpdateTimeSpace {
+        height: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .recentPost .postUpdateTime {
+        background-color: #eee;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+        border: solid #ccc;
+        border-width: 0.1rem 0.1rem 0.1rem 0;
+        position: absolute;
+        bottom: 0.5rem;
+        margin: 0.5rem 0 0 -0.5rem;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+}
+@media screen and (min-width:761px) {
+    .recentPost .thumbnailImg {
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 14rem;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+    .recentPost .postTitleBody {
+        padding: 1rem 0.5rem;
+    }
+    .recentPost .postTitle {
+        font-size: 1rem;
+    }
+    .recentPost .postUpdateTimeSpace {
+        height: 3rem;
+        margin-top: 1rem;
+    }
+    .recentPost .postUpdateTime {
+        background-color: #eee;
+        padding: 0.5rem 1rem;
+        border: solid #ccc;
+        border-width: 0.1rem 0.1rem 0.1rem 0;
+        position: absolute;
+        bottom: 1rem;
+        margin: 1rem 0 0 -0.5rem;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+}
+@media screen and (max-width:760px) {
+    .adsBeforeMoreLink {
+        display: none;
+    }
+    .adsBeforeMoreLinkMobile {
+        margin: 0.5rem auto;
+        text-align: center;
+    }
+}
+@media screen and (min-width:761px) {
+    .adsBeforeMoreLink {
+        margin: 0.5rem auto;
+        text-align: center;
+    }
+    .adsBeforeMoreLinkMobile {
+        display: none;      
+    }
+}
+.nextPostLink a {
+    display: block;
+    width: 96%;
+    text-decoration: none;
+    background-color: #128AD1;
+    color: #fff;
+    margin: 0.5rem auto 1rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+.nextPostLink a:hover {
+    background-color: #0C67D1;
+}
+
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    コンテンツ  SINGLE                                         *****/
+/** ------------------------------------------------------------------------------ **/
+@media screen and (max-width:760px) {
+    .contentInr {
+        width: 100%;
+        margin: 1rem auto 0;
+        background-color: #fff;
+    }
+}
+@media screen and (min-width:761px) {
+    .contentInr {
+        width: 740px;
+        margin: 1rem auto 0;
+        background-color: #fff;
+        box-shadow: 0px 0px 0.2rem #777;
+        border-radius: 0.3rem;
+    }
+}
+.contentInr .postTitleBody {
+    padding: 1rem;
+    position: relative;
+}
+.contentInr .postTitle {
+    font-size: 1.5rem;
+}
+.contentInr .postUpdateTimeSpace {
+    height: 1rem;
+    margin-top: 1rem;
+}
+.contentInr .postUpdateTime {
+    background-color: #eee;
+    padding: 0.5rem 1rem;
+    border: solid #ccc;
+    border-width: 0.1rem 0 0.1rem 0.1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    margin: 1rem 0 0 -1rem;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+.postCategoryList {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.postCategoryList a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #128AD1;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+.adsBeforeContent {
+    margin: auto;
+    max-width: 728px;
+}
+.contentInr .contentBody {
+    padding: 1rem;
+    line-height: 1.8;
+}
+.contentInr .contentBody img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 0.2rem #777;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+}
+.contentInr .contentBody iframe {
+    max-width: 100%;
+}
+.contentInr .contentBody .center {
+    margin: 0 auto;
+    text-align: center;
+}
+.contentInr .contentBody h2 {
+    padding: 0.4rem 1rem;
+    margin: 2rem -1rem;
+    background-color: #f1f1f1;
+    border-bottom: 0.1rem solid #e1e1e1;
+    border-bottom: 0.3rem solid #128AD1;
+}
+.contentInr .contentBody h3 {
+    padding: 0.4rem 1rem;
+    margin: 1rem -1rem;
+    background-color: #f1f1f1;
+/*  border-bottom: 0.1rem solid #e1e1e1; */
+/*  border-bottom: 0.3rem solid #128AD1; */
+}
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    AppStore Helper                                         *****/
+/** ------------------------------------------------------------------------------ **/
+
+.appstorehelper {
+    margin: 1rem auto -1rem;
+    background-color: #eaeaea;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #c1c1c1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding: 1rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+.appstorehelper_appicn {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: none !important;
+    margin: 1rem 0;
+/*     position: absolute; */
+    right: 0;
+    flex: 6rem;
+}
+
+a.goappstore {
+    display: block;
+    text-indent: -9999rem !important;
+    position: relative;
+    top: -3.5rem;
+    left: 1rem;
+    width: 10rem;
+    height: 4rem;
+    background-image: url(../images/gotoappstore.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: -3rem;
+}
+
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    highlight.js                                         *****/
+/** ------------------------------------------------------------------------------ **/
+
+.contentInr .contentBody code {
+    padding:2px 4px;
+    border:1px solid rgba(0,0,0,0.09);
+    border-radius:4px;
+    font-size:90%;
+    font-family:Menlo, Monaco, Consolas, monospace;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    background:#fafafa !important;
+}
+.contentInr .contentBody pre{
+    margin:24px 0;
+}
+.contentInr .contentBody pre>code{
+    display:block;
+    padding:24px !important;
+    line-height:1.5;;
+}
+.hljs{
+    display:block;
+    overflow-x:auto;
+    padding:0.5em;
+    color:#333;
+    background:#f8f8f8;
+}
+.hljs-comment,.hljs-quote{
+    color:#998;
+    font-style:italic;
+}
+.hljs-keyword,.hljs-selector-tag,.hljs-subst{
+    color:#333;
+    font-weight:bold;
+}
+.hljs-number,.hljs-literal,.hljs-variable,
+.hljs-template-variable,.hljs-tag .hljs-attr{
+    color:#008080;
+}
+.hljs-string,.hljs-doctag {
+    color:#d14;
+}
+.hljs-title,.hljs-section,.hljs-selector-id {
+    color:#900;
+    font-weight:bold;
+}
+.hljs-subst {
+    font-weight:normal;
+}
+.hljs-type,.hljs-class .hljs-title {
+    color:#458;
+    font-weight:bold;
+}
+.hljs-tag,.hljs-name,.hljs-attribute {
+    color:#000080;
+    font-weight:normal;
+}
+.hljs-regexp,.hljs-link {
+    color:#009926;
+}
+.hljs-symbol,.hljs-bullet {
+    color:#990073;
+}
+.hljs-built_in,.hljs-builtin-name {
+    color:#0086b3;
+}
+.hljs-meta {
+    color:#999;
+    font-weight:bold;
+}
+.hljs-deletion {
+    background:#fdd;
+}
+.hljs-addition {
+    background:#dfd;
+}
+.hljs-emphasis {
+    font-style:italic;
+}
+.hljs-strong {
+    font-weight:bold;
+}
+
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    コンテンツ下  SINGLE                                         *****/
+/** ------------------------------------------------------------------------------ **/
+@media screen and (max-width:760px) {
+    .adsAfterContent {
+        display: none;
+    }
+    .adsAfterContentMobile {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media screen and (min-width:761px) {
+    .adsAfterContent {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+    }
+    .adsAfterContentMobile {
+        display: none;
+    }
+}
+#shareButtons {
+    margin: 2rem 0;
+}
+#shareButtonsHead {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 0.5rem;
+}
+.shareButtonsBody {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.shareButtonsBody a {
+    width: 148px;
+    height: 50px;
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+}
+.shareButtonsBody .twitter {
+    background-color: #1da1f2;
+}
+.shareButtonsBody .facebook {
+    background-color: #315095;
+}
+.shareButtonsBody .googlePlus {
+    background-color: #dc4e41;
+}
+.shareButtonsBody .hatena {
+    background-color: #00a4de;
+}
+.shareButtonsBody .pocket {
+    background-color: #e73649;
+}
+.shareButtonsBody .iconBody {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 30px;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+.shareButtonsBody .iconBody > div {
+    margin: 0 0.2rem;
+}
+.shareButtonsBody .icon {
+    background-size: contain;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+}
+.shareButtonsBody .twitter .icon {
+    background-image: url(../images/twitter_icon.svg);
+}
+.shareButtonsBody .facebook .icon {
+    background-image: url(../images/facebook_icon.svg);
+}
+.shareButtonsBody .googlePlus .icon {
+    background-image: url(../images/googlePlus_icon.svg);
+}
+.shareButtonsBody .hatena .icon {
+    background-image: url(../images/hatena_icon.svg);
+}
+.shareButtonsBody .pocket .icon {
+    background-image: url(../images/pocket_icon.svg);
+}
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    おすすめ記事                                        *****/
+/** ------------------------------------------------------------------------------ **/
+
+#related {
+    padding: 1rem 0;
+}
+#relatedHead {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    margin: 1rem 0 1rem;
+    background-color: #f1f1f1;
+    border-bottom: 0.1rem solid #e1e1e1;
+    border-bottom: 0.3rem solid #128AD1;
+    text-align: center;
+}
+@media screen and (max-width:760px) {
+    #relatedBody {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .relatedPost {
+        width: 48%;
+        margin: 0 auto 1rem;
+        background-color: #f1f1f1;
+        border: 0.1rem solid #ccc;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width:761px) {
+    #relatedBody {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+    }
+    .relatedPost {
+        width: 170px;
+        margin: 0 auto;
+        background-color: #f1f1f1;
+        border: 0.1rem solid #ccc;
+        border-radius: 0.2rem;
+        cursor: pointer;
+    }
+}
+.relatedPost a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.relatedPost .thumbnailImg {
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 8rem;
+    border-top-left-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+}
+.relatedPost .postTitleBody {
+    padding: 0.5rem;
+}
+.relatedPost .postTitle {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+#related .nextPostLink a {
+    display: block;
+    width: 96%;
+    text-decoration: none;
+    background-color: #128AD1;
+    color: #fff;
+    margin: 1rem auto 0;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+}
+#related .nextPostLink a:hover {
+    background-color: #0C67D1;
+}
+/** ------------------------------------------------------------------------------ **/
+/*****                    サイドバー                                           *****/
+/** ------------------------------------------------------------------------------ **/
+@media screen and (max-width:760px) {
+    #sidebar {
+        display: none;
+    }
+}
+@media screen and (min-width:761px) {
+    #sidebar {
+        width: 302px;
+        overflow: hidden;
+    }
+}
+.adsSidebarTopParts {
+    margin: 1rem auto 0;
+}
+.sideProfile {
+    width: 300px;
+    margin: 1rem auto 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 0.2rem #777;
+    border-radius: 0.3rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+}
+.profileBody {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+.profileImgBody {
+    flex: 5rem;
+}
+.profileImg {
+    background-image: url(../images/profile_icon.png);
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.profileTextBody {
+    flex: 10rem;
+}
+.profileName {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+.profileText {
+    font-size: 0.8rem;
+}
+.profileLink {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #128AD1;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+.profileLink:hover {
+    background-color: #0C67D1;
+}
+.socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    height: 10rem;
+}
+.socialLinks > a {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 5rem;
+}
+.socialLinks > a:hover {
+    opacity: 0.8;
+}
+.socialLinks .twitter {
+    background-image: url(../images/twitter.svg);
+}
+.socialLinks .facebook {
+    background-image: url(../images/facebook.svg);
+}
+.socialLinks .feedly {
+    background-image: url(../images/feedly.svg);
+    border-bottom-left-radius: 0.3rem;
+}
+.socialLinks .googlePlus {
+    background-image: url(../images/googlePlus.svg);
+    border-bottom-right-radius: 0.3rem;
+}
+.adsSidebarFixed {
+    margin: 1rem auto 0;
+}
+.adsSidebarFixed.fixed {
+    position: fixed;
+    top: 0;
+}
+
+
+/** ------------------------------------------------------------------------------ **/
+/*****                    フッター                                           *****/
+/** ------------------------------------------------------------------------------ **/
+
+footer {
+    box-shadow:0px 0px 3px 2px #ccc;
+    -moz-box-shadow:0px 0px 3px 2px #ccc;
+    -webkit-box-shadow:0px 0px 3px 2px #ccc;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    background-color: #EBEBEB;
+}
+address {
+    text-align: center;
+    margin: auto;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+address a {
+    color: #128AD1;
+    text-decoration: none;
+}

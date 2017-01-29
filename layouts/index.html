@@ -1,0 +1,39 @@
+{{ partial "header.html" . }}
+
+<div id="container">
+    <div id="content">
+        <nav id="recentPosts">
+            {{ range (.Paginator 10).Pages }}
+              {{ .Render "summary"}}
+            {{ end }}
+        </nav>
+        <div class="adsBeforeMoreLink">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ページトップ広告 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-6365102272040879"
+                 data-ad-slot="5550738810"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="adsBeforeMoreLinkMobile">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- モバイル ヘッダ上広告 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:50px"
+                 data-ad-client="ca-pub-6365102272040879"
+                 data-ad-slot="9320043888"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        {{ if .Paginator.HasNext }}
+        <div class="ajaxLoad nextPostLink"><a rel="next" href="{{.Paginator.Next.URL}}" ontouchstart="">さらに記事を読む</a></div>
+        {{ end }}
+    </div>
+    {{ partial "sidebar.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

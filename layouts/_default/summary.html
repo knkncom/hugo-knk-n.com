@@ -1,0 +1,16 @@
+<section class="recentPost">
+    <a href="{{ .RelPermalink }}">
+        <div class="postThumbnailBody">
+        {{ if and (.Params.image) (ne .Params.image "") }}
+        <div class="thumbnailImg" style="background-image:url({{ .Params.image }})"></div>
+        {{ else }}
+        <div class="thumbnailImg" style="background-image:url({{ .Site.Params.image }})"></div>
+        {{ end }}
+        </div>
+        <div class="postTitleBody">
+            <h2 class="postTitle">{{ .Title }}</h2>
+            <div class="postUpdateTimeSpace"></div>
+            <time class="postUpdateTime" datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+        </div>
+    </a>
+</section>

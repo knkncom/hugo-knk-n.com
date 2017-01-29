@@ -1,0 +1,13 @@
+BaseURL = "http://knk-n.com"
+languageCode = "ja"
+Title = "けんけん.com"
+preservetaxonomynames = "true"
+HasCJKLanguage = "true"
+
+[permalinks]
+blog = "/blog/:year/:month/:slug/"
+ 
+[params]
+baseUrl = "http://knk-n.com"
+image = "/assets/images/favicon.jpg"
+paginate = 10

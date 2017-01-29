@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+{{ .Hugo.Generator }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="copyright" content="Copyright &copy; Kensuke Nishimura All rights reserved" />
+<!-- <meta name="google-site-verification" content="hLAob0ZIhg0c3AeIGNo4AMQPkxMjM1UM3mBPYNvwceE" /> -->
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}" />
+<title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+<meta name="format-detection" content="telephone=no">
+<link rel="pingback" href="{{ if .IsPage }}{{ .RelPermalink }}{{ else }}{{ .Site.Params.baseUrl }}{{ end }}" />
+<!-- Facebook OGP BEGIN -->
+<meta property="og:type" content="blog" />
+<meta property="og:site_name" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" />
+<meta property="fb:app_id" content="249666728412848" />
+<meta property="article:publisher" content="https://www.facebook.com/knkncom" />
+<meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" />
+<meta property="og:image" content="{{ .Site.Params.image }}" />
+<meta property="og:description" content=""  />
+<meta property="og:url" content="{{ if .IsPage }}{{ .RelPermalink }}{{ else }}{{ .Site.Params.baseUrl }}{{ end }}" />
+<!-- Facebook OGP END -->
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@knk_n"> 
+<!-- Google+ -->
+<link rel="author" href="https://plus.google.com/113532530795858235391" />
+<!-- アイコン・ファビコンの設定 -->
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="{{ .Site.Params.image }}" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.autopager-1.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/lib/main.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<header>
+    <div class="headerInr">
+        <a id="siteLogo" href="{{ .Site.Params.baseUrl }}">{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</a>
+    </div>
+</header>

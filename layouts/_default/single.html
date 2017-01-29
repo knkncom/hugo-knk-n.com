@@ -1,0 +1,109 @@
+{{ partial "header.html" . }}
+<div id="container">
+    <div id="content">
+
+<div class="contentInr">
+    <div class="postTitleBody">
+        <h2 class="postTitle">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</h2>
+        <div class="postUpdateTimeSpace"></div>
+        <time class="postUpdateTime" datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+        <div class="postCategoryList">
+            {{ if .Params.categories }}{{ range .Params.categories }}<span><a href="/categories/{{ . | urlize }}">{{ . }}</a></span>{{ end }}{{ end }}
+        </div>
+    </div>
+    <div class="adsBeforeContent">                      
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- レスポンシブ用 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6365102272040879"
+             data-ad-slot="1564599211"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  <section class="contentBody" itemprop="text">
+    {{ .Content }}
+  </section>
+<div id="shareButtons">
+    <div id="shareButtonsHead">この記事をシェアする</div>
+    <div class="shareButtonsBody">
+        <a class="twitter" href="http://twitter.com/share?url={{ .Site.Params.baseUrl }}{{ .RelPermalink }}&text={{ .Title }}{{ if .Draft }} #Draft{{ end }}&via=knk_n&tw_p=tweetbutton&related=knk_n" target="_blank"><div class="iconBody"><div class="icon"></div><div class="twitter-count"></div></div></a>
+        <a class="facebook" href="http://www.facebook.com/share.php?u={{ .Site.Params.baseUrl }}{{ .RelPermalink }}&t={{ .Title }}{{ if .Draft }} #Draft{{ end }}" target="_blank"><div class="iconBody"><div class="icon"></div><div class="facebook-count"></div></div></a>
+        <a class="googlePlus" href="https://plus.google.com/share?url={{ .Site.Params.baseUrl }}{{ .RelPermalink }}" target="_blank"><div class="iconBody"><div class="icon"></div><div class="googleplus-count"></div></div></a>
+        <a class="hatena" href="http://b.hatena.ne.jp/entry/{{ .Site.Params.baseUrl }}{{ .RelPermalink }}" target="_blank"><div class="iconBody"><div class="icon"></div><div class="hatebu-count"></div></div></a>
+        <a class="pocket" href="http://getpocket.com/edit?url={{ .Site.Params.baseUrl }}{{ .RelPermalink }}&title=get_the_title" target="_blank"><div class="iconBody"><div class="icon"></div><div class="pocket-count"></div></div></a>
+    </div>
+</div>
+
+<div class="adsAfterContent">
+    <div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 記事下レクタングル1 170115 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-6365102272040879"
+             data-ad-slot="2035604016"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 記事下レクタングル2 170115 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-6365102272040879"
+             data-ad-slot="3512337210"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>                  
+</div>
+<div class="adsAfterContentMobile">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- レスポンシブ2 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6365102272040879"
+         data-ad-slot="4518065616"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<!-- related-articles -->
+{{ if and (.Params.categories) (ne .Params.categories "") }}
+<div id="related">
+    <div id="relatedHead">カテゴリ{{ .Params.categories }}のおすすめ記事</div>
+    <div id="relatedBody">
+        {{ range first 4 ( where ( where .Site.Pages.ByDate.Reverse ".Params.categories" "intersect" .Params.categories ) "Permalink" "!=" .Permalink ) }}
+        <section class="relatedPost">
+            <a href="{{ .RelPermalink }}">
+                <div class="postThumbnailBody">
+                    {{ if and (.Params.image) (ne .Params.image "") }}
+                    <div class="thumbnailImg" style="background-image:url({{ .Params.image }})"></div>
+                    {{ else }}
+                    <div class="thumbnailImg" style="background-image:url({{ .Site.Params.image }})"></div>
+                    {{ end }}
+                </div>
+                <div class="postTitleBody">
+                    <h2 class="postTitle">{{ .Title | markdownify }}</h2>
+                </div>
+            </a>
+        </section>
+    {{ end }}
+    </div>
+    <div class="nextPostLink">
+    {{ if .Params.categories }}{{ range .Params.categories }}<a href="/categories/{{ . | urlize }}">もっと読む</a>{{ end }}{{ end }}
+    </div>
+</div>
+{{ end }}
+<!-- /related-articles -->
+</div>
+</div>
+    {{ partial "sidebar.html" . }}
+</div>
+{{ partial "footer.html" . }}
