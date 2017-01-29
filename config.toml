@@ -8,7 +8,7 @@ HasCJKLanguage = "true"
 blog = "/blog/:year/:month/:slug/"
  
 [params]
-baseUrl = "http://knk-n.com.s3-website-ap-northeast-1.amazonaws.com/"
+baseUrl = "http://knk-n.com/"
 image = "/assets/images/favicon.jpg"
 paginate = 10
-imagePath = "http://knk-n.com.s3-website-ap-northeast-1.amazonaws.com/images/"
+imagePath = "http://knk-n.com/images/"
