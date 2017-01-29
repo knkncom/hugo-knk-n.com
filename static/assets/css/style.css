@@ -710,6 +710,7 @@ a.goappstore {
     #sidebar {
         width: 302px;
         overflow: hidden;
+        margin-bottom: 1rem;
     }
 }
 .adsSidebarTopParts {
