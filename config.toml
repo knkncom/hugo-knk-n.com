@@ -1,4 +1,4 @@
-BaseURL = "http://knk-n.com"
+BaseURL = "https://knk-n.com"
 languageCode = "ja"
 Title = "けんけん.com"
 preservetaxonomynames = "true"
@@ -8,7 +8,7 @@ HasCJKLanguage = "true"
 blog = "/blog/:year/:month/:slug/"
  
 [params]
-baseUrl = "http://knk-n.com/"
+baseUrl = "https://knk-n.com/"
 image = "/assets/images/favicon.jpg"
 paginate = 10
-imagePath = "http://knk-n.com/images/"
+imagePath = "https://knk-n.com/images/"
