@@ -33,6 +33,17 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="/assets/lib/jquery.autopager-1.0.0.min.js"></script>
 <script type="text/javascript" src="/assets/lib/main.js"></script>
+<script>
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23009516-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </head>
 <body>
@@ -40,5 +51,9 @@
 <header>
     <div class="headerInr">
         <a id="siteLogo" href="{{ .Site.Params.baseUrl }}">{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</a>
+        <div id="search">
+           <form action="//google.com/search" id="searchbox" method="get" accept-charset="UTF-8">
+            <input id="searchInput" type="text" placeholder="サイト内検索" value="" name="q" size="30" autocomplete="off"><input type="submit" value="検索"></form>
+        </div>
     </div>
 </header>

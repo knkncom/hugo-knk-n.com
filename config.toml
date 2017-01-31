@@ -5,7 +5,7 @@ preservetaxonomynames = "true"
 HasCJKLanguage = "true"
 
 [permalinks]
-blog = "/blog/:year/:month/:slug/"
+archives = "/:year/:month/:day/:slug/"
  
 [params]
 baseUrl = "https://knk-n.com/"
