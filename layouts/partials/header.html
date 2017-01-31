@@ -53,7 +53,9 @@ var _gaq = _gaq || [];
         <a id="siteLogo" href="{{ .Site.Params.baseUrl }}">{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</a>
         <div id="search">
            <form action="//google.com/search" id="searchbox" method="get" accept-charset="UTF-8">
-            <input id="searchInput" type="text" placeholder="サイト内検索" value="" name="q" size="30" autocomplete="off"><input type="submit" value="検索"></form>
+            <input id="searchInput" type="text" placeholder="サイト内検索" value="" name="q" size="30" autocomplete="off"><input type="submit" value="検索">
+            <input type="hidden" name="sitesearch" value="http://knk-n.com">
+            </form>
         </div>
     </div>
 </header>
